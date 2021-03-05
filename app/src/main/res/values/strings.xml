@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">WorkManager</string>
+    <string name="title">Background Work</string>
+    <string name="message">Background work is being done by work Manager</string>
+    <string name="channel_name">Work Channel</string>
+    <string name="channel_description">work description</string>
+    <string name="do_work">Do work</string>
+</resources>
