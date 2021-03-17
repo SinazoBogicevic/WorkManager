@@ -16,12 +16,13 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         binding = ActivityMainBinding.inflate(getLayoutInflater());
-        View view =binding.getRoot();
-        setContentView(view);
+        //View view =binding.getRoot();
+        setContentView(binding.getRoot());
 
-        Utils.buildNotification(this);
+        //Utils.buildNotification(this);
 
         viewModel = new ViewModelProvider(this, ViewModelProvider.AndroidViewModelFactory.getInstance(getApplication())).get(ViewModel.class);
 
+        //binding.button.setOnClickListener(view -> viewModel.showNotification());
     }
 }

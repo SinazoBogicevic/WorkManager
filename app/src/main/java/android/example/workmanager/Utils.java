@@ -10,8 +10,12 @@ import androidx.core.app.NotificationManagerCompat;
 
 import static android.example.workmanager.Constants.CHANNEL_ID;
 import static android.example.workmanager.Constants.NOTIFICATION_ID;
+import static android.example.workmanager.Constants.NOTIFICATION_MESSAGE;
+import static android.example.workmanager.Constants.NOTIFICATION_TITLE;
 
 final class Utils {
+
+    private Utils(){}
 
     static void buildNotificationChannel(Context context){
         // without channel, notification will be ignore on
@@ -37,14 +41,12 @@ final class Utils {
 
     }
 
-    static void buildNotification(Context context){
-        CharSequence title = String.valueOf(R.string.title);
-        CharSequence message = String.valueOf(R.string.message);
+    static void buildStatusNotification(Context context){
         //creates the notification
         NotificationCompat.Builder builder = new NotificationCompat.Builder(context, CHANNEL_ID);
         builder.setSmallIcon(R.drawable.ic_launcher_background)
-                .setContentTitle(title)
-                .setContentText(message)
+                .setContentTitle(NOTIFICATION_TITLE)
+                .setContentText(NOTIFICATION_MESSAGE)
                 .setPriority(NotificationCompat.PRIORITY_LOW);
 
         //shows the notification
