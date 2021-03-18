@@ -17,7 +17,15 @@ public class FirstWork extends Worker {
     public Result doWork() {
         Context context = getApplicationContext();
 
-        Utils.buildNotificationChannel(context);
-        return Result.success();
+        try{
+
+            Utils.buildStatusNotification(context);
+            return Result.success();
+
+        } catch (Exception e) {
+            e.printStackTrace();
+            return Result.failure();
+        }
+
     }
 }
